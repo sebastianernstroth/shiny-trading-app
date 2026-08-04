@@ -63,11 +63,11 @@ get_range_start <- function(rg, df_max = today, stock_dates = stock_data$date) {
 
 #---- Data ---------------------------------------------------------------------
 
-dir <- getwd()
-data_path <- file.path(dir, "data")
-logs_path  <- file.path(dir, "logs")
+appDir <- getwd()
+dataDir <- file.path(appDir, "data")
+logsDir  <- file.path(appDir, "logs")
 
-df_list1 <- qs::qread(paste(data_path, "SP500.qs", sep = "/"))
+df_list1 <- qs::qread(paste(dataDir, "SP500.qs", sep = "/"))
 
 df <- df_list1[1:assets] %>%
   bind_rows() %>%
@@ -108,7 +108,7 @@ tickers <- stock_data %>%
   distinct(ticker) %>%
   pull()
 
-df_list2 <- qs::qread(paste(data_path, "ratings.qs", sep = "/"))
+df_list2 <- qs::qread(paste(dataDir, "ratings.qs", sep = "/"))
 
 df1 <- df_list2 %>%
   bind_rows() %>%
@@ -2989,7 +2989,7 @@ server <- function(input, output, session) {
       sep = "_"
     )
     
-    interactions_file <- file.path(logs_path, paste0("interactions_", id_suffix, ".csv"))
+    interactions_file <- file.path(logsDir, paste0("interactions_", id_suffix, ".csv"))
     
     # Write logs to disk
     if (nrow(interactions()) > 0) {
