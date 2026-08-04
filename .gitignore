@@ -53,5 +53,6 @@ data/
 logs/
 
 # Local config / secrets
+R/config.R
 shiny-trading-app-83e2d1cdc55e.json
 
