@@ -128,7 +128,7 @@ This prototype is intended for research use under appropriate ethical oversight.
 
 ## License
 
-Add your preferred license here (e.g., MIT, GPL-3). This code is provided as a research prototype and may be adapted for specific experimental needs.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
