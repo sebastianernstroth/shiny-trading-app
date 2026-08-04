@@ -1312,7 +1312,7 @@ app_js <- tags$script(HTML("
     });
   }
 
-  window.addEventListener('scroll', updateStickyBars);
+  window.addEventListener('scroll', upadateStickyBars);
   document.addEventListener('DOMContentLoaded', updateStickyBars);
 "))
 
