@@ -47,3 +47,11 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Shiny app data and logs
+data/
+logs/
+
+# Local config / secrets
+shiny-trading-app-83e2d1cdc55e.json
+
